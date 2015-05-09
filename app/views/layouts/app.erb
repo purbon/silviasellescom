@@ -1,0 +1,17 @@
+<html>
+  <head>
+  <title> SilviaSelles.com </title>
+  <%= stylesheet_link_tag    :application %>
+  <%= javascript_include_tag :modernizr %>
+
+  <%= javascript_include_tag :jquery, :fastclick %>
+  <%= javascript_include_tag 'foundation/foundation.js' %>
+  <script>
+    $(document).foundation();
+  </script>
+  </head>
+  <body>
+    <h2> Silvia Selles </h2>
+    <%= yield %>
+  </body>
+</html>

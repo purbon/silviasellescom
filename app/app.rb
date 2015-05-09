@@ -2,6 +2,8 @@ module Silviaselles
   class App < Padrino::Application
     register Padrino::Mailer
     register Padrino::Helpers
+    register CompassInitializer
+
 
     enable :sessions
 
@@ -38,7 +40,7 @@ module Silviaselles
     # set :locale_path, 'bar'       # Set path for I18n translations (default your_apps_root_path/locale)
     # disable :sessions             # Disabled sessions by default (enable if needed)
     # disable :flash                # Disables sinatra-flash (enabled by default if Sinatra::Flash is defined)
-    # layout  :my_layout            # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
+      layout  :app                   # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
     #
 
     ##
@@ -61,18 +63,5 @@ module Silviaselles
     #     render 'errors/500'
     #   end
     #
-
-    get "/" do
-      "Default site"
-    end
-
-    get "/projects" do
-      "Projects page"
-    end
-
-    get "/about" do
-      "About page"
-    end
-
   end
 end

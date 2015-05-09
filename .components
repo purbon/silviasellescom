@@ -4,7 +4,7 @@
 :mock: none
 :script: jquery
 :renderer: erb
-:stylesheet: none
+:stylesheet: compass
 :namespace: Silviaselles
 :migration_format: number
 :admin_renderer: erb

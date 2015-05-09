@@ -14,6 +14,9 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
+gem 'compass'
+gem 'compass-blueprint'
+
 gem 'bcrypt'
 gem 'erubis', '~> 2.7.0'
 gem 'sqlite3'
@@ -25,6 +28,9 @@ gem 'rack-test', :require => 'rack/test', :group => 'test'
 
 # Padrino Stable Gem
 gem 'padrino', '0.12.5'
+
+# Front end foundation framework
+gem "zurb-foundation"
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
