@@ -53,19 +53,18 @@ form.bp {
 
 
 #header {
-  background-color: $secondary-color;
+  background-color: $primary-color;
   h1 {
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
     font-size: 56px;
-    a {
-      color: white;
-    }
+    color: white;
   }
 }
 
 #body {
+  margin-top: 3px;
   h1 {
     text-transform: uppercase;
     text-align: center;
@@ -73,7 +72,6 @@ form.bp {
     font-size: 56px;
     margin-bottom: 1em;
     line-height: 1.2em;
-    color: #151515;
   }
   section {
     height: 100%;
@@ -95,5 +93,11 @@ body {
 }
 
 .credits {
-  background-color: $secondary-color;
+  background: $primary-color;
+  background-size: 8px 2px !Important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
 }
