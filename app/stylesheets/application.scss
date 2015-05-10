@@ -50,3 +50,50 @@ form.bp {
 
 // Use Zurb Foundation
 @import "foundation";
+
+
+#header {
+  background-color: $secondary-color;
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 56px;
+    a {
+      color: white;
+    }
+  }
+}
+
+#body {
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 56px;
+    margin-bottom: 1em;
+    line-height: 1.2em;
+    color: #151515;
+  }
+  section {
+    height: 100%;
+    .content {
+      margin-left: auto;
+      margin-right: auto;
+      text-align:justify;
+      h1 {
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+body {
+  background: #fafafa;
+  margin: 0 0;
+}
+
+.credits {
+  background-color: $secondary-color;
+}

@@ -5,6 +5,14 @@ Silviaselles::App.controllers :web do
     render "index"
   end
 
+  get :projects, :map => "/projects" do
+    render "projects"
+  end
+
+  get :about, :map => "/about" do
+    render "about"
+  end
+
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
   #   render 'index'

@@ -1,17 +1,37 @@
 <html>
   <head>
-  <title> SilviaSelles.com </title>
-  <%= stylesheet_link_tag    :application %>
-  <%= javascript_include_tag :modernizr %>
+    <title> SilviaSelles.com </title>
+    <%= stylesheet_link_tag    :application %>
+    <%= javascript_include_tag :modernizr %>
 
-  <%= javascript_include_tag :jquery, :fastclick %>
-  <%= javascript_include_tag 'foundation/foundation.js' %>
-  <script>
-    $(document).foundation();
-  </script>
+    <%= javascript_include_tag :jquery, :fastclick %>
+    <%= javascript_include_tag 'foundation/foundation.js' %>
+    <script> $(document).foundation(); </script>
   </head>
   <body>
-    <h2> Silvia Selles </h2>
-    <%= yield %>
+    <div id="header">
+      <div class="row">
+        <div class="small-12 small-centered columns">
+          <h1> Silvia Selles </h1>
+        </div>
+      </div>
+    </div>
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar data-options="">
+        <section class="top-bar-section">
+          <ul class="left">
+            <li class=""><a href="/">/</a></li>
+            <li class=""><a href="/projects">Projects</a></li>
+            <li class=""><a href="/about">AboutMe</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    <div id="body">
+      <%= yield %>
+      <section class="credits">
+          <%= Time.now.year %> Silvia Selles
+      </section>
+    </div>
   </body>
 </html>
