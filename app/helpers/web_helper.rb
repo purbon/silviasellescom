@@ -3,11 +3,13 @@
 module Silviaselles
   class App
     module WebHelper
-      # def simple_helper_method
-      # ...
-      # end
+      def link_with_locale(*args, &block)
+        if I18n.locale
+          args[1] << "?locale=#{I18n.locale}"
+        end
+        link_to(*args, &block)
+      end
     end
-
     helpers WebHelper
   end
 end

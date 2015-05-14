@@ -1,6 +1,11 @@
 Silviaselles::App.controllers :web do
   layout :app
 
+
+  before do
+    @lang = params["locale"] || I18n.locale
+  end
+
   get :index, :map => "/" do
     render "index"
   end
@@ -12,6 +17,7 @@ Silviaselles::App.controllers :web do
   get :about, :map => "/about" do
     render "about"
   end
+
 
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'

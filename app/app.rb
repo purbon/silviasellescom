@@ -4,6 +4,8 @@ module Silviaselles
     register Padrino::Helpers
     register CompassInitializer
 
+     register AutoLocale
+     set :locales, [:en, :de] # First locale is the default locale
 
     enable :sessions
 

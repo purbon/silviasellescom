@@ -5,7 +5,7 @@
     <%= javascript_include_tag :modernizr %>
 
     <%= javascript_include_tag :jquery, :fastclick %>
-    <%= javascript_include_tag 'foundation/foundation.js' %>
+    <%= javascript_include_tag 'js/foundation.js' %>
     <script> $(document).foundation(); </script>
   </head>
   <body>
@@ -20,9 +20,13 @@
       <nav class="top-bar" data-topbar data-options="">
         <section class="top-bar-section">
           <ul class="left">
-            <li class=""><a href="/">/</a></li>
-            <li class=""><a href="/projects">Projects</a></li>
-            <li class=""><a href="/about">AboutMe</a></li>
+            <li class=""><%= link_with_locale "/", "/" %></li>
+            <li class=""><%= link_with_locale "Projects", "/projects" %></li>
+            <li class=""><%= link_with_locale "AboutMe", "/about" %></li>
+          </ul>
+           <ul class="right">
+             <li class=""><a href="?locale=en#"><%= image_tag 'England.png'%></a></li>
+             <li class=""><a href="?locale=de#"><%= image_tag 'Germany.png'%></a></li>
           </ul>
         </section>
       </nav>
