@@ -14,8 +14,8 @@ Silviaselles::App.controllers :web do
     render "projects"
   end
 
-  get :about, :map => "/about" do
-    render "about"
+  get :contactme, :map => "/contactme" do
+    render "contactme"
   end
 
 

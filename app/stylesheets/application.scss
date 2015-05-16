@@ -36,11 +36,11 @@ form.bp {
   @include container;
   background-color: #cccccc;
   #header, #footer {
-    @include column(24); }
+  @include column(24); }
   #sidebar {
-    @include column(3); }
+  @include column(3); }
   #content {
-    @include column(21, true); } }
+@include column(21, true); } }
 
 // Load normalize.scss as recommended by Zurb Foundation
 @import "normalize";
@@ -53,7 +53,7 @@ form.bp {
 
 
 #header {
-  background-color: $primary-color;
+  background-color: $secondary-color;
   h1 {
     text-transform: uppercase;
     text-align: center;
@@ -64,13 +64,13 @@ form.bp {
 }
 
 #body {
+  background-color: $white;
   margin-top: 3px;
   h1 {
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
     font-size: 56px;
-    margin-bottom: 1em;
     line-height: 1.2em;
   }
   section {
@@ -85,19 +85,36 @@ form.bp {
       }
     }
   }
+  img {
+    padding: 5px;
+  }
 }
 
 body {
-  background: #fafafa;
+  background: $secondary-color;
   margin: 0 0;
 }
 
-.credits {
-  background: $primary-color;
-  background-size: 8px 2px !Important;
+#footer {
+  background: $secondary-color;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
   font-size: 10px;
   color: #fff;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.no-select-text {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
