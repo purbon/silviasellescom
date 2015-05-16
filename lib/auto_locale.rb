@@ -26,7 +26,7 @@ module AutoLocale
     app.helpers AutoLocale::Helpers
     app.set :locales, [:en]
     app.before do
-      if request.fullpath =~ /locale=([#{options.locales.join('|')}]*)&?/
+      if request.fullpath =~ /locale=(#{options.locales.join('|')})&?/
         I18n.locale = $1.to_sym
       else
         I18n.locale = options.locales.first
