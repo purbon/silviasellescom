@@ -33,6 +33,7 @@ module Silviaselles
 
     access_control.roles_for :admin do |role|
       role.project_module :accounts, '/accounts'
+      role.project_module :photos, '/project_photos'
     end
 
     # Custom error management 
