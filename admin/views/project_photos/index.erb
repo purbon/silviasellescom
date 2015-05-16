@@ -39,6 +39,9 @@
 
                 <th class=header> <%= mat(:project_photo, :title) %></th>
                 <th class=header> <%= mat(:project_photo, :alt) %></th>
+                <th class=header> <%= mat(:project_photo, :frontpage) %></th>
+                <th class=header> <%= mat(:project_photo, :location) %></th>
+                
                 <th class="header list-row-action-header"></th>
       </tr>
     </thead>
@@ -51,6 +54,8 @@
           </td>
           <td class=list-column> <%= project_photo.title %> </td>
           <td class=list-column> <%= project_photo.alt %> </td>
+          <td class=list-column> <%= project_photo.frontpage %> </td>
+          <td class=list-column> <%= project_photo.location %> </td>
           <td class="list-column list-row-action">
             <div class='list-row-action-wrapper'>
                <%= link_to tag_icon(:edit), :href => url(:project_photos, :edit, :id => project_photo.id), :rel => :tooltip, :title => "#{pat(:edit)} project_photo", :class => 'list-row-action-wrapper-link' %>

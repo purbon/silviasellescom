@@ -11,6 +11,7 @@ Silviaselles::App.controllers :web do
   end
 
   get :projects, :map => "/projects" do
+    @photos = ProjectPhoto.search
     render "projects"
   end
 

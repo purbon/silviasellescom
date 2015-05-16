@@ -12,11 +12,16 @@ Silviaselles::Admin.controllers :project_photos do
   end
 
   post :create do
+    frontpage = params[:frontpage] || false
+    params[:project_photo].merge!(:frontpage => frontpage)
+    files = save_files(params[:files])
+    params[:project_photo].merge!(:location => files.join(','))
+
     @project_photo = ProjectPhoto.new(params[:project_photo])
     if (@project_photo.save rescue false)
       @title = pat(:create_title, :model => "project_photo #{@project_photo.id}")
       flash[:success] = pat(:create_success, :model => 'ProjectPhoto')
-      params[:save_and_continue] ? redirect(url(:project_photos, :index)) : redirect(url(:project_photos, :edit, :id => @project_photo.id))
+      redirect(url(:project_photos, :index))
     else
       @title = pat(:create_title, :model => 'project_photo')
       flash.now[:error] = pat(:create_error, :model => 'project_photo')
@@ -39,6 +44,8 @@ Silviaselles::Admin.controllers :project_photos do
     @title = pat(:update_title, :model => "project_photo #{params[:id]}")
     @project_photo = ProjectPhoto[params[:id]]
     if @project_photo
+      frontpage = params[:frontpage] || false
+      params[:project_photo].merge!(:frontpage => frontpage)
       if @project_photo.modified! && @project_photo.update(params[:project_photo])
         flash[:success] = pat(:update_success, :model => 'Project_photo', :id =>  "#{params[:id]}")
         params[:save_and_continue] ?
@@ -85,4 +92,5 @@ Silviaselles::Admin.controllers :project_photos do
     end
     redirect url(:project_photos, :index)
   end
+
 end

@@ -6,30 +6,15 @@
   </div>
 
   <div class="small-block-grid-3 medium-block-grid-3 large-block-grid-3">
-    <li>
-    <div class="small-12 large-12 columns">
-      <%= image_tag 'funda011.jpg' %>
+    <% @photos.each do |photo| %>
+      <li>
+        <div class="small-12 large-12 columns">
+          <%= image_tag photo[:location], :alt => photo[:alt] %>
+        </div>
+        <div class="small-12 large-12 columns">
+          <p> blablablabla </p>
+        </div>
+      </li>
+    <% end %>
     </div>
-    <div class="small-12 large-12 columns">
-      <p> blablablabla </p>
-    </div>
-    </li>
-    <li>
-    <div class="small-12 large-12 columns">
-      <%= image_tag 'funda021.jpg' %>
-    </div>
-    <div class="small-12 large-12 columns">
-      <p> blablablabla </p>
-    </div>
-    </li>
-    <li>
-    <div class="small-12 large-12 columns">
-      <%= image_tag 'funda022.jpg' %>
-    </div>
-    <div class="small-12 large-12 columns">
-      <p> blablablabla </p>
-    </div>
-    </li>
-
-  </div>
 </div>

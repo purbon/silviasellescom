@@ -38,6 +38,8 @@ Padrino.before_load do
   #I18n.default_locale = :de
 end
 
+#Padrino::Logger::Config[:development] = { :log_level => :warn }
+
 ##
 # Add your after (RE)load hooks here
 #

@@ -11,6 +11,20 @@
     <%= favicon_tag "favicon.ico" %>
     <link href='http://fonts.googleapis.com/css?family=Varela' rel=stylesheet />
     <%= stylesheet_link_tag 'bootstrap', 'application' %>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'vendor/jquery.ui.widget.js' %>
+    <%= javascript_include_tag 'jquery.iframe-transport.js' %>
+    <%= javascript_include_tag 'jquery.fileupload.js' %>
+    <script>
+        $(function () {
+            $('#fileupload').fileupload({ dataType: 'json',
+                                          done: function (e, data) {
+                                                 $.each(data.result.files, function (index, file) {
+                                                    $('<p/>').text(file.name).appendTo(document.body);
+                                                 });
+                                          }});
+        });
+    </script>
   </head>
   <body>
     <div class="navbar navbar-fixed-top">
