@@ -1,2 +1,16 @@
 en:
-  foo: "bar-en"
+  menu:
+     projects: "Projects"
+     contact: "Contact"
+  me: "me"
+  intro:
+    before: "My name is Silvia, a 36 years old from Barcelona who move to Berlin, Germany a while a go. Since the early days of my life I’ve been fascinated by fashion and crafting clothing, while mostly experimenting with yarn, I’ve work also on several other projects. Being lucky enough to work for a while in my passion, I’ve never stop hacking stuff for myself, friend and family while at home."
+    after:  "I believe in people who pursue their dreams, and today mine is share and help people to have nice clothing for them and their childs. In this website you will see my most recent projects, going from helmet therapy cover shells to other nice baby apparel.  Contact me if you’re interested to know more about them."
+  projects:
+    me: "My projects"
+    intro: "My most recent projects are shown in this page. Here you will find samples of a few helmet shells I’ve recently made, bibs, pacifier holders, etc. All are handmade by me using kid friendly materials and totally personalized. Contact me if you’re interested to know more."
+  contact: "Contact"
+  from: "From"
+  email: "Email"
+  message: "Your message"
+  send: "Send"

@@ -1,10 +1,10 @@
-<h1>Contact <small>(me)</small></h1>
+<h1><%= t('contact') %> <small>(<%= t('me') %>)</small></h1>
 
 <% form_tag '/contactme', :class => 'centered', :method => 'post', 'data-abide' => '' do %>
   <div class="row">
     <div class="large-12 columns">
       <div class="small-9 columns">
-        <label>From:
+        <label><%= t('from') %>:
           <%= text_field_tag :from, :maxlength => 40, :placeholder => "Your name", :required => true %>
         </label>
       </div>
@@ -13,7 +13,7 @@
   <div class="row">
     <div class="large-12 columns">
       <div class="small-9 columns">
-        <label>Email:
+        <label><%= t('email') %>:
           <%= text_field_tag :email, :maxlength => 100, :placeholder => "Your email", :required => true %>
         </label>
       </div>
@@ -22,7 +22,7 @@
    <div class="row">
     <div class="large-12 columns">
       <div class="small-9 columns">
-      <label>Your message:
+        <label><%= t('message') %>:
         <%= text_area_tag :message, :placeholder => "..." %>
       </label>
       </div>
@@ -30,7 +30,7 @@
   </div>
   <div class="row">
     <div class="small-9 columns">
-      <button type="submit">Send</button>
+       <button type="submit"><%= t('send') %></button>
     </div>
   </div>
 <% end %>
