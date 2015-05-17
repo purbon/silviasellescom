@@ -12,8 +12,6 @@ Silviaselles::Admin.controllers :project_photos do
   end
 
   post :create do
-    frontpage = params[:frontpage] || false
-    params[:project_photo].merge!(:frontpage => frontpage)
     files = save_files(params[:files])
     params[:project_photo].merge!(:location => files.join(','))
 
@@ -44,8 +42,6 @@ Silviaselles::Admin.controllers :project_photos do
     @title = pat(:update_title, :model => "project_photo #{params[:id]}")
     @project_photo = ProjectPhoto[params[:id]]
     if @project_photo
-      frontpage = params[:frontpage] || false
-      params[:project_photo].merge!(:frontpage => frontpage)
       if @project_photo.modified! && @project_photo.update(params[:project_photo])
         flash[:success] = pat(:update_success, :model => 'Project_photo', :id =>  "#{params[:id]}")
         params[:save_and_continue] ?

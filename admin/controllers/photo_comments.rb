@@ -13,7 +13,6 @@ Silviaselles::Admin.controllers :photo_comments do
   end
 
   post :create do
-    puts params.inspect
     @photo_comment = PhotoComment.new(params[:photo_comment])
     if (@photo_comment.save rescue false)
       @title = pat(:create_title, :model => "photo_comment #{@photo_comment.id}")
