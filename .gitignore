@@ -6,5 +6,5 @@ vendor/gems/*
 .sass-cache/*
 db/*.db
 .*.sw*
-public/images
+public/images/funda*
 config/env.yml
