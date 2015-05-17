@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+exec("puma -e production -d -b unix:///home/silviacom/production/silviacom.sock")
