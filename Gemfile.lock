@@ -74,6 +74,8 @@ GEM
     padrino-support (0.12.5)
       activesupport (>= 3.1)
     polyglot (0.3.5)
+    puma (2.11.2)
+      rack (>= 1.1, < 2.0)
     rack (1.5.3)
     rack-protection (1.5.3)
       rack
@@ -423,6 +425,7 @@ DEPENDENCIES
   compass-blueprint
   erubis (~> 2.7.0)
   padrino (= 0.12.5)
+  puma
   rack-test
   rake
   rspec
