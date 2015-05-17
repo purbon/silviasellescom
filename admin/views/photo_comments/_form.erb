@@ -1,0 +1,33 @@
+<% error = @photo_comment.errors.key?(:project_photo_id) && @photo_comment.errors[:project_photo_id].count > 0 %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :project_photo_id, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :project_photo_id, :class => 'form-control input-xlarge input-with-feedback', :autofocus => true %>
+    <span class='help-inline'><%= error ? f.error_message_on(:project_photo_id) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @photo_comment.errors.key?(:comment) && @photo_comment.errors[:comment].count > 0 %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :comment, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :comment, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:comment) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @photo_comment.errors.key?(:i18n) && @photo_comment.errors[:i18n].count > 0 %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :i18n, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :i18n, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:i18n) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+
+
+<div class="form-actions">
+  <%= f.submit pat(:save), :class => 'btn btn-primary' %>
+  &nbsp;
+  <%= f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue' %>
+  &nbsp;
+  <%= link_to pat(:cancel), url(:photo_comments, :index), :class => 'btn btn-default' %>
+</div>
