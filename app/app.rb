@@ -4,10 +4,20 @@ module Silviaselles
     register Padrino::Helpers
     register CompassInitializer
 
-     register AutoLocale
-     set :locales, [:en, :de] # First locale is the default locale
+    register AutoLocale
+
+    set :locales, [:en, :de] # First locale is the default locale
 
     enable :sessions
+
+    set :delivery_method, :smtp => {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :user_name            => "#{settings.emailuser}@gmail.com",
+      :password             => "#{settings.emailpass}",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
 
     ##
     # Caching support.
@@ -42,7 +52,7 @@ module Silviaselles
     # set :locale_path, 'bar'       # Set path for I18n translations (default your_apps_root_path/locale)
     # disable :sessions             # Disabled sessions by default (enable if needed)
     # disable :flash                # Disables sinatra-flash (enabled by default if Sinatra::Flash is defined)
-      layout  :app                   # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
+    layout  :app                   # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
     #
 
     ##
@@ -57,9 +67,9 @@ module Silviaselles
     ##
     # You can manage errors like:
     #
-      error 404 do
-        render 'errors/404'
-      end
+    error 404 do
+      render 'errors/404'
+    end
     #   error 500 do
     #     render 'errors/500'
     #   end

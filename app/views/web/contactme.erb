@@ -1,11 +1,11 @@
 <h1>Contact <small>(me)</small></h1>
 
-<form data-abide class="centered">
+<% form_tag '/contactme', :class => 'centered', :method => 'post', 'data-abide' => '' do %>
   <div class="row">
     <div class="large-12 columns">
       <div class="small-9 columns">
         <label>From:
-          <input type="text" id="from" placeholder="Your name" required>
+          <%= text_field_tag :from, :maxlength => 40, :placeholder => "Your name", :required => true %>
         </label>
       </div>
     </div>
@@ -14,7 +14,7 @@
     <div class="large-12 columns">
       <div class="small-9 columns">
         <label>Email:
-          <input type="email" id="email" placeholder="Your email" required>
+          <%= text_field_tag :email, :maxlength => 100, :placeholder => "Your email", :required => true %>
         </label>
       </div>
     </div>
@@ -23,7 +23,7 @@
     <div class="large-12 columns">
       <div class="small-9 columns">
       <label>Your message:
-        <textarea placeholder="..."></textarea>
+        <%= text_area_tag :message, :placeholder => "..." %>
       </label>
       </div>
     </div>
@@ -33,4 +33,4 @@
       <button type="submit">Send</button>
     </div>
   </div>
-</form>
+<% end %>

@@ -21,6 +21,9 @@
 #   Padrino.mount('AppName', :app_file => 'path/to/file', :app_class => 'BlogApp').to('/')
 #
 
+env = Padrino.env.to_s
+APP_CONFIG = YAML.load_file("#{Padrino.root}/config/env.yml")[env]
+
 ##
 # Setup global project settings for your apps. These settings are inherited by every subapp. You can
 # override these settings in the subapps as needed.
@@ -30,6 +33,11 @@ Padrino.configure_apps do
   set :session_secret, 'd425c9cb25cb1a91ea3177bb307c85f66c9c902cc17955fcdcc4a38b8b70ff81'
   set :protection, :except => :path_traversal
   set :protect_from_csrf, true
+
+  # setup email configuration options
+  set :emailuser, APP_CONFIG['emailuser']
+  set :emailpass, APP_CONFIG['emailpass']
+  set :contactme, APP_CONFIG['contactme']
 end
 
 # Mounts the core application for this project
