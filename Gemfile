@@ -34,6 +34,9 @@ gem 'padrino', '0.12.5'
 # Front end foundation framework
 gem "zurb-foundation"
 
+gem 'capistrano', '~> 3.4.0'
+gem 'rvm1-capistrano3', require: false
+
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 
