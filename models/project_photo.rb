@@ -5,4 +5,9 @@ class ProjectPhoto < Sequel::Model
     options.merge!(:frontpage => true) unless options[:frontpage]
     ProjectPhoto.where(options).all
   end
+
+  def self.list
+    ProjectPhoto.all.map { |p| {:id => p.id, :title => p.title } }
+  end
+
 end

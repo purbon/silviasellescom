@@ -8,6 +8,7 @@ Silviaselles::Admin.controllers :photo_comments do
   get :new do
     @title = pat(:new_title, :model => 'photo_comment')
     @photo_comment = PhotoComment.new
+    @list_of_photos = ProjectPhoto.list.map { |e| [e[:title], e[:id]] }
     render 'photo_comments/new'
   end
 
