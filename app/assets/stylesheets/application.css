@@ -13,3 +13,73 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* =Media queries
+-------------------------------------------------------------- */
+
+/* Minimum width of 600 pixels. */
+.site {
+    margin: 0 auto;
+    max-width: 1120px;
+    min-width: 1120px;
+    width: 1120px;
+    overflow: hidden;
+}
+
+.content {
+    float: left;
+    width: 600px;
+    margin-right: 40px;
+    margin-top: 70px;
+}
+
+body.single-attachment .content,
+	body.full-width .content {
+    width: 1120px;
+}
+
+#main {
+  border-top: none;
+  box-shadow: none;
+}
+
+/* Page structure */
+.site {
+    padding: 0 0px;
+}
+
+.content {
+  margin: 24px 0 0;
+  margin: 1.714285714rem 0 0;
+  width: 600px;
+  margin-left: 22%;
+}
+
+.widgets {
+  margin: 24px 0 0;
+  margin: 1.714285714rem 0 0;
+  position: relative;
+  width: 200px;
+  float: left;
+}
+
+ /* IE8 and IE7 - Left and Right Sidebars */
+.ie  .custom-layout .content {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.ie .custom-layout .widgets {
+    float: left;
+    width: 20%;
+    position: relative;
+    margin-left: -750px;
+}
+
