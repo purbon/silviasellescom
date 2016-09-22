@@ -1,0 +1,107 @@
+// Place all the styles related to the web controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.hero {
+  background: url('berlin.jpg') no-repeat center center;
+	background-size: cover;
+  height: 50vh;
+  overflow: hidden;
+  h1 {
+    color: #fff;
+    text-align: center;
+    @include vertical-align;
+  }
+}
+
+.footer {
+  background-color: #292c2f;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4rem;
+  p {
+    &.slogan {
+      color: #8d9093;
+      font-size: 1.8rem;
+      margin: 0 0 1rem;
+    }
+    &.copywrite {
+      color: #8f9296;
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  }
+  .links a {
+    list-style: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    &::after {
+      content: "•";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }
+}
+
+// Default medium-gray color
+$medium-gray: #cacaca;
+// Default global padding
+$global-padding: 1rem;
+// Global value used for all elements that have a border radius.
+$global-radius: 3px;
+
+// Setting the form border color
+$form-border-color: $medium-gray;
+// Setting the form padding
+$form-padding: $global-padding;
+// Setting the form border radius
+$form-radius: $global-radius;
+
+.log-in-form {
+  //border: 1px solid $form-border-color;
+  padding: $form-padding;
+  background-color: #000;
+  border-radius: $form-radius;
+
+  a {
+    margin-bottom: 0;
+  }
+}
+
+.search-box {
+  border: 1px solid $form-border-color;
+  padding: $form-padding;
+}
+
+.header-box-row {
+  border-bottom: 1px solid $form-border-color;
+  padding: $form-padding;
+}
+
+.map-box-row {
+  padding: $form-padding;
+}
+
+.menu-box-row {
+  border-left: 1px solid $form-border-color;
+  padding: $form-padding;
+}
+
+#mapid {
+  position: absolute;
+  width: 100%;
+}

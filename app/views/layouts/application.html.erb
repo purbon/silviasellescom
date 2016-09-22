@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <head data-hook="inside_head">
+      <%= render partial: 'spree/shared/head' %>
+    </head>
+
+    <title>Steap after steap</title>
+
+    <%== meta_data_tags %>
+    <%= canonical_tag(current_store.url) %>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+  <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    
+    <div class="logo">
+      <a href="http://zurb.com/stickers/images/intro-foundation.png"><img src="http://zurb.com/stickers/images/intro-foundation.png" /></a>
+    </div>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class=""><a href="#">Right Button Active</a></li>
+      <li class="divider"></li>
+      <li class=""><a href="#">Right Button Active</a></li>
+      <li class="divider"></li>
+      <li class="has-dropdown">
+        <a href="#">Right Button Dropdown</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+          <li class="active"><a href="#">Active link in dropdown</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="social-icons">
+      <li><a href=""><i class="fi-telephone"></i></a></li>
+      <li><a href=""><i class="fi-social-linkedin"></i></a></li>
+      <li><a href=""><i class="fi-social-twitter"></i></a></li>
+      <li><a href=""><i class="fi-social-facebook"></i></a></li>
+    </ul>
+    
+  </section>
+</nav>
+
+
+<header class="hero">
+  <h1>Step by step</h1>
+</header>
+
+<div id="content">
+  <%= yield %>
+</div>
+
+  <footer class="footer">
+    <div class="row">
+      <div class="small-12 columns">
+        <p class="slogan">Lots of awesome patterns for you!</p>
+        <p class="links">
+        <%= link_to "Home",  "/" %>
+        <a href="#">Pricing</a>
+        <%= link_to "About Us", "/web/about_us" %>
+        <a href="#">Faq</a>
+        <a href="#">Contact</a>
+        </p>
+        <p class="copywrite">Copywrite not copypwrite © 2015</p>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>

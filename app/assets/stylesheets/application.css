@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+ *= require flag-icon
+
+ */
+
+body {
+background-color: $body-background;
+}
+
+.logo {
+  width: 40px;
+  margin-left: 5px; }
+
+@media only screen and (min-width: 40.063em) {
+  .top-bar {
+    height: 6rem;
+    padding-top: 3rem;
+    position: relative; }
+
+  .social-icons {
+    position: absolute;
+    right: 0;
+    top: -45px; }
+
+  .logo {
+    width: 70px;
+    margin-top: -2.3rem; } }
+@media only screen and (min-width: 40.063em) {
+  .social-icons {
+    top: -35px; } }
+
+.has-form {
+  position: absolute;
+  top: 0;
+  left: 6rem;
+min-width: 14rem; }
+@media only screen and (max-width: 40em) {
+  .has-form {
+    min-width: 10rem;
+  top: 0.5rem; }
+  .has-form .button {
+height: 1.85rem; } }
+
+.center-select {
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+
+#content {
+  padding: 1em;
+}
